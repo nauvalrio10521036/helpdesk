@@ -1,0 +1,52 @@
+### 📝 Deskripsi Proyek:
+
+Proyek ini bertujuan untuk membangun sebuah sistem informasi berbasis web menggunakan framework **Laravel** yang berfungsi sebagai pusat pelaporan gangguan jaringan serta monitoring keamanan infrastruktur jaringan hotel. Sistem ini akan terintegrasi dengan API dari **Wazuh** sebagai platform monitoring dan manajemen ancaman keamanan (SIEM).
+
+---
+
+### 📦 Fitur Utama:
+
+1. **Login System**
+
+   * Autentikasi berbasis role (IT Manager, Resepsionis, Manajer)
+   * Middleware untuk akses terbatas
+
+2. **Manajemen Pengguna**
+
+   * Tambah, edit, hapus pengguna
+   * Penetapan role dan hak akses
+   * Logging aktivitas pengguna
+
+3. **Manajemen Perangkat dan VLAN**
+
+   * Input dan monitoring perangkat jaringan (router, switch, mikrotik, PC.)
+   * Pengelolaan dan dokumentasi VLAN per lantai atau zona hotel
+   * Kategori perangkat dan lokasi
+
+4. **Manajemen Laporan Gangguan**
+
+   * Formulir pelaporan gangguan jaringan oleh resepsionis
+   * Status pelaporan (baru, ditangani, selesai)
+   * Notifikasi ke tim IT via Telegram
+
+5. **Integrasi API Wazuh untuk Monitoring Keamanan**
+
+   * Menarik data real-time dari Wazuh API
+   * Menampilkan:
+
+     * Alerts / threat level
+     * Status agent (online/offline)
+     * Statistik log keamanan
+     * Event penting (e.g. brute force, malware, exploit attempts)
+   * Visualisasi grafik dan table (Laravel + Chart.js atau lainnya)
+
+---
+
+### ⚙️ Teknologi:
+
+* **Framework**: Laravel 11
+* **Database**: MySQL / MariaDB
+* **Frontend**: Blade Template / Vue.js (optional)
+* **API**: Wazuh API v4.x
+* **Security**: JWT/Session-based auth, Role-based access
+* **Integrasi Eksternal**: Wazuh Server & Agents yang telah terpasang pada jaringan hotel
